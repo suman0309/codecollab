@@ -1,2 +1,3 @@
 in terminal write npx(node package executer)
 npx create-react-app 01basicreact
+react is spa=single page application
