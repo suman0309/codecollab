@@ -16,4 +16,17 @@ app ek function ha function App(){
     );
 }
 fir isko export karo
-export default App;
+export default App; 
+
+
+return(           //{variable}
+    <h1>hi react {variables like a ,b etc its value to display}</h1>
+                  know as evaluated expression means mei mhi oe final our=tcome likhonga
+)
+
+now talking about major problem in reat the thing isin the counter appl project when we try to update the counter
+variable upadte hoyta but ui me reflect nahi hita ha
+the value internally gets updated but in the main screen the value the udated value barelly gets displayed so to solv ethis problem we need
+hooks useState 
+eg: const [counter,setCounter]=useState(15)
+           //variable //function
