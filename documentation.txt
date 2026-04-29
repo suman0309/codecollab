@@ -1,3 +1,19 @@
 in terminal write npx(node package executer)
 npx create-react-app 01basicreact
 react is spa=single page application
+reactDOM=for web apps
+doms==trees
+const root=ReactDom.createRoot(document.getelementById('root'));
+root.render(
+    <App/>//custom tag can be created in react
+);
+
+app kaya ha
+
+app ek function ha function App(){
+    return(
+        <h1>hello</h1>
+    );
+}
+fir isko export karo
+export default App;
