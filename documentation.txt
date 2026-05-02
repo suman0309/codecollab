@@ -30,3 +30,8 @@ the value internally gets updated but in the main screen the value the udated va
 hooks useState 
 eg: const [counter,setCounter]=useState(15)
            //variable //function
+
+
+           taileind props
+          npm install -D tailwindcss postcss autoprefixer
+           npx tailwindcss init -p

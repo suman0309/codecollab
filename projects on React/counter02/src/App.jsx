@@ -32,7 +32,7 @@ function App() {
 
       <button onClick={addValue} >Add Value  {counter}</button>
       <br></br>
-      <button onClick={removevalue}>Remove Value</button>
+      <button onClick={removevalue}>Remove Value {counter} </button>
 <footer>{counter}</footer>
     </>
   )

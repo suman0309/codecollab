@@ -1,0 +1,36 @@
+npm install -D tailwindcss @tailwindcss/vite
+⚙️ Step 3: Update vite.config.js
+
+Open it and change to:
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+})
+🎨 Step 4: Fix CSS (IMPORTANT — new syntax)
+
+Open src/index.css and replace everything with:
+
+@import "tailwindcss";
+
+👉 YES — just this one line (Tailwind v4 style)
+
+🚫 Step 5: Remove old files
+
+Delete if present:
+
+postcss.config.js ❌
+tailwind.config.js ❌ (optional for now)
+🔁 Step 6: Restart
+npm run dev
+🧪 Step 7: Test
+function App() {
+  return (
+    <div className="bg-blue-500 text-white text-3xl p-10">
+      NOW IT WILL WORK 🚀
+    </div>
+  );
+}
