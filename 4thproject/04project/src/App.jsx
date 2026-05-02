@@ -2,83 +2,62 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
-import './App.css'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [color, setColor] = useState("olive")
+
+
+  const changeColor = (color) => {
+    setColor(color);
+  }
+  const resetColor=()=>{
+    setColor("olive")
+  }
 
   return (
     <>
-      <div class="bg-white">
-  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-    <h2 class="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
+      <div className="w-full h-screen duration-200"
+        // syntax of style {{}}
+        style={{ backgroundColor: color }}
+      >
+        {/* 
+//botton bar */}
+        <div className="fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2">
 
-    <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-      <div class="group relative">
-        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
-        <div class="mt-4 flex justify-between">
-          <div>
-            <h3 class="text-sm text-gray-700">
-              <a href="#">
-                <span aria-hidden="true" class="absolute inset-0"></span>
-                Basic Tee
-              </a>
-            </h3>
-            <p class="mt-1 text-sm text-gray-500">Black</p>
+          <div className="flex flex-wrap justify-center gap-3 shadow-lg bg-white px-3 py-2 rounded-3xl">
+            <button className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
+              style={{ backgroundColor: "red" }} onClick={() => changeColor("red")}>RED</button>
+
+            <button className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
+              style={{ backgroundColor: "blue" }} onClick={() => changeColor("blue")}>BLUE</button>
+
+            <button className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
+              style={{ backgroundColor: "green" }} onClick={() => changeColor("green")}>GREEN</button>
+
+            <button className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
+              style={{ backgroundColor: "purple" }} onClick={()=>changeColor("purple")}>PURPLE</button>
+
+            <button className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
+              style={{ backgroundColor: "pink" }} onClick={() => changeColor("pink")}>PINK</button>
+
+            <button className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
+              style={{ backgroundColor: "orange" }} onClick={() => changeColor("orange")}>ORANGE</button>
+
+<button className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
+              style={{ backgroundColor: "black" }} onClick={() => resetColor()}>RESET</button>
+
+
           </div>
-          <p class="text-sm font-medium text-gray-900">$35</p>
+
         </div>
+
+
       </div>
-      <div class="group relative">
-        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-02.jpg" alt="Front of men&#039;s Basic Tee in white." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
-        <div class="mt-4 flex justify-between">
-          <div>
-            <h3 class="text-sm text-gray-700">
-              <a href="#">
-                <span aria-hidden="true" class="absolute inset-0"></span>
-                Basic Tee
-              </a>
-            </h3>
-            <p class="mt-1 text-sm text-gray-500">Aspen White</p>
-          </div>
-          <p class="text-sm font-medium text-gray-900">$35</p>
-        </div>
-      </div>
-      <div class="group relative">
-        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-03.jpg" alt="Front of men&#039;s Basic Tee in dark gray." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
-        <div class="mt-4 flex justify-between">
-          <div>
-            <h3 class="text-sm text-gray-700">
-              <a href="#">
-                <span aria-hidden="true" class="absolute inset-0"></span>
-                Basic Tee
-              </a>
-            </h3>
-            <p class="mt-1 text-sm text-gray-500">Charcoal</p>
-          </div>
-          <p class="text-sm font-medium text-gray-900">$35</p>
-        </div>
-      </div>
-      <div class="group relative">
-        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-04.jpg" alt="Front of men&#039;s Artwork Tee in peach with white and brown dots forming an isometric cube." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
-        <div class="mt-4 flex justify-between">
-          <div>
-            <h3 class="text-sm text-gray-700">
-              <a href="#">
-                <span aria-hidden="true" class="absolute inset-0"></span>
-                Artwork Tee
-              </a>
-            </h3>
-            <p class="mt-1 text-sm text-gray-500">Iso Dots</p>
-          </div>
-          <p class="text-sm font-medium text-gray-900">$35</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
     </>
-  )
+  );
 }
 
-export default App
+export default App;
+
