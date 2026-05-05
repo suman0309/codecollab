@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 
 function App() {
   const [length, setLength] = useState(8)
@@ -23,8 +23,30 @@ function App() {
     setPassword(pass)
   }, [length, number, character,setPassword])
 
+
+
+
+
+
+
+
 //page refesh ya changes karne par without pressing buttton password genearte ho jaye so we use useEffect hook
 useEffect(()=>{passwordGenerator()},[length,number,character,passwordGenerator])
+
+//use ref
+const passwordRef=useRef(null)
+
+const copypasstoclip=useCallback(()=>{
+  //to give user a copy hogay uska reference or mssg
+  passwordRef.current?.select()
+  //to select in range
+  //  passwordRef.current?.setSelectionRange(0,9)
+ window.navigator.clipboard.writeText(password)
+},[password])
+
+
+
+
 
 
   return (
@@ -35,18 +57,22 @@ useEffect(()=>{passwordGenerator()},[length,number,character,passwordGenerator])
      
 
       <div className="flex shadow rounded-lg overflow-hidden ">
-        <label className='py-1' >password :{password}</label>
-        {/* <input
+        <input
           type='text'
           value={password}
-          className='outline-none w-full py-1 px-3'
+          className='outline-none w-full bg-white py-1 px-3  rounded-lg'
           placeholder='password'
+          ref={passwordRef}
           readOnly
-        /> */}
+        />
+        <input
+        
+        />
         
       </div>
 
 <button 
+onClick={copypasstoclip}
 className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>copy</button>
 
 <div className='flex text-sm gap-x-2'>
