@@ -35,3 +35,22 @@ eg: const [counter,setCounter]=useState(15)
            taileind props
           npm install -D tailwindcss postcss autoprefixer
            npx tailwindcss init -p
+
+           in react router
+           //instead of a tag we use Link 
+        //and we should not use a tag as pura page load hota ha
+
+
+                                   //navlink ke ander className declared as ={()=>} i.e fires a callback beacuse isActive give sus the features ki agar koi paricular page like /about ya .home active ho to that can be highlighted
+                                <NavLink
+                                    className={({isActive}) =>
+                                        `block py-2 pr-4 pl-3 duration-200 border-b ${isActive ? "text-orange-700":"text-gray-700"}border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                    }
+                                >
+                                    Home
+                                </NavLink>
+
+
+
+
+                                react state maneger-> context Api

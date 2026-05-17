@@ -5,6 +5,7 @@ import heroImg from './assets/hero.png'
 import Header from './components/Header/header'
 import Footer from './components/footer/footer'
 import Home from './components/home/home'
+import About from './components/about/about'
 // import './App.css'
 
 function App() {

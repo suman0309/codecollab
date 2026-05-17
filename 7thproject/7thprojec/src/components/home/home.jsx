@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 export default function Home() {
     return (
         <div className="mx-auto w-full max-w-7xl">
@@ -31,12 +31,12 @@ export default function Home() {
                 </div>
 
                 <div className="absolute inset-0 w-full sm:my-20 sm:pt-1 pt-12 h-full ">
-                    <img className="w-96" src="https://i.ibb.co/5BCcDYB/Remote2.png" alt="image1" />
+                    <img className="w-96" src="https://tse4.mm.bing.net/th/id/OIP.mYG23IWV0idU17wJzeCD1AHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="image1" />
                 </div>
             </aside>
 
             <div className="grid  place-items-center sm:mt-20">
-                <img className="sm:w-96 w-48" src="https://i.ibb.co/2M7rtLk/Remote1.png" alt="image2" />
+                <img className="sm:w-96 w-48" src="https://img.freepik.com/premium-vector/kid-with-hearing-aid-device-happy-boy-portrait-ear-mould-receiver-listening-smiling-deaf-child-with-medical-sound-audio-sensory-gadget-flat-vector-illustration-isolated-white-background_198278-24429.jpg?w=2000" alt="image2" />
             </div>
 
             <h1 className="text-center text-2xl sm:text-5xl py-10 font-medium">Lorem Ipsum Yojo</h1>
